@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "gh-pages-deploy": "node scripts/gh-pages-deploy.js",
     "preview": "vite preview",
     "lint": "eslint . --fix --ignore-path .gitignore"
   },
@@ -24,6 +25,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.4.0",
     "eslint-plugin-vue": "^9.27.0",
+    "execa": "latest",
     "pinia": "^2.1.7",
     "sass": "1.77.6",
     "unplugin-auto-import": "^0.17.6",
