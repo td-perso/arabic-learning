@@ -6,7 +6,6 @@ settings:
 
 importers:
 
-  .:
     dependencies:
       '@mdi/font':
         specifier: 7.4.47
