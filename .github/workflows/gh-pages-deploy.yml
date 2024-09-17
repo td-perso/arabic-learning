@@ -20,7 +20,11 @@ jobs:
         run: npm ci
 
       - name: Build project
-        run: npm run build
+        run: 
+          npm cache clean --force
+          rm -rf node_modules package-lock.json
+          npm install
+          npm ci
 
       - name: Deploy to GitHub Pages
         run: |
