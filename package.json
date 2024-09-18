@@ -1,7 +1,7 @@
 {
   "name": "arabic-learning",
   "version": "0.0.0",
-  "homepage": "/arabic-learning/",
+  "homepage": "https://github.com/td-perso/arabic-learning/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

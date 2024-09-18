@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: '/arabic-learning/'
+  publicPath: 'https://github.com/td-perso/arabic-learning/'
 };
