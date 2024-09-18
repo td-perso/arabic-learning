@@ -14,7 +14,7 @@ jobs:
       - name: Setup Node.js for use with actions
         uses: actions/setup-node@v2
         with:
-          node-version: '12.x'
+          node-version: '16.x'  # Updated to Node 16.x
 
       - name: Cache Node.js modules
         uses: actions/cache@v2
@@ -28,16 +28,13 @@ jobs:
         run: npm cache clean --force
 
       - name: Install dependencies
-        run: npm install
-
-      - name: Run npm ci
-        run: npm ci
+        run: npm ci  # Use npm ci instead of npm install
 
       - name: Build project
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        run: |
-          git config user.name "td-perso"
-          git config user.email "thibaut.duby@outlook.fr"
-          npm run gh-pages-deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist  # Adjust this path if necessary
