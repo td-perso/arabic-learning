@@ -1,6 +1,7 @@
 {
   "name": "arabic-learning",
   "version": "0.0.0",
+  "homepage": "/arabic-learning/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
