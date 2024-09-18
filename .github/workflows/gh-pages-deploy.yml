@@ -34,7 +34,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        run: 
-          git config user.name "td-perso"
-          git config user.email "thibaut.duby@outlook.fr"
-          npm run gh-pages-deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Use GITHUB_TOKEN for auth
+          publish_dir: ./dist  # The directory where your build output is
