@@ -1,36 +1,53 @@
-/**
- * router/index.ts
- *
- * Automatic routes for `./src/pages/*.vue`
- */
+import { createRouter, createWebHistory } from 'vue-router';
+import Connexion from '@/components/Connexion.vue';
+import Index from '@/components/Index.vue'
+import Page1 from '@/components/Page1.vue'
+import Page2 from '@/components/Page2.vue'
+import Page3 from '@/components/Page3.vue'
+import AppPinia from '@/components/AppPinia.vue'
 
-// Composables
-import { createRouter, createWebHistory } from 'vue-router/auto'
-import { setupLayouts } from 'virtual:generated-layouts'
-import { routes } from 'vue-router/auto-routes'
+const routes = [
+  {
+    name: 'All',
+    path: '/:catchAll(.*)',
+    redirect: '/connexion',
+    component: Connexion
+  },
+  {
+    name: 'AppPinia',
+    path: '/apppinia',
+    component: AppPinia
+  },
+  {
+    name: 'Connexion',
+    path: '/connexion',
+    component: Connexion
+  },
+  {
+    name: 'Page1',
+    path: '/page1',
+    component: Page1
+  },
+  {
+    name: 'Page2',
+    path: '/page2',
+    component: Page2
+  },
+  {
+    name: 'Page3',
+    path: '/page3',
+    component: Page3
+  },
+  {
+    name: 'Index',
+    path: '/index',
+    component: Index
+  }
+];
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: setupLayouts(routes),
-})
+  history: createWebHistory(),
+  routes
+});
 
-// Workaround for https://github.com/vitejs/vite/issues/11804
-router.onError((err, to) => {
-  if (err?.message?.includes?.('Failed to fetch dynamically imported module')) {
-    if (!localStorage.getItem('vuetify:dynamic-reload')) {
-      console.log('Reloading page to fix dynamic import error')
-      localStorage.setItem('vuetify:dynamic-reload', 'true')
-      location.assign(to.fullPath)
-    } else {
-      console.error('Dynamic import error, reloading page did not fix it', err)
-    }
-  } else {
-    console.error(err)
-  }
-})
-
-router.isReady().then(() => {
-  localStorage.removeItem('vuetify:dynamic-reload')
-})
-
-export default router
+export default router;

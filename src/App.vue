@@ -1,11 +1,15 @@
 <template>
-  <v-app>
-    <v-main>
-      <router-view />
-    </v-main>
-  </v-app>
+  <router-view />
 </template>
 
-<script setup>
-  //
+<script>
+export default {
+  name: "App",
+  components: {},
+  data: () => ({}),
+  computed: {
+  },
+  mounted: function () { },
+  methods: {},
+};
 </script>
