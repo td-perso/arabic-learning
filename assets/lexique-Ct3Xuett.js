@@ -1,0 +1,1 @@
+import{_ as n,o,a9 as t,q as a}from"./index-BItJEF8p.js";const s={name:"Lexique",components:{}};function c(r,e,l,p,u,i){return o(),t("div",null,e[0]||(e[0]=[a("main",null,[a("h1",null,"Lexique")],-1)]))}const d=n(s,[["render",c],["__scopeId","data-v-3ba9c0ca"]]);export{d as default};
