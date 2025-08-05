@@ -8,3 +8,39 @@
 // @use 'vuetify/settings' with (
 //   $color-pack: false
 // );
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #362f2d;
+}
+
+.v-list-item {
+  color: #362f2d;
+}
+
+body {
+  color: #362f2d;
+}
+
+.aref-ruqaa-regular {
+  font-family: "Aref Ruqaa", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.aref-ruqaa-bold {
+  font-family: "Aref Ruqaa", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+// .v-application {
+//   font-family: "Aref Ruqaa", serif;
+// }
+
+// a:visited {
+//   color: inherit;
+// }

@@ -1,15 +1,17 @@
 <template>
-  <router-view />
+  <v-app>
+    <v-main>
+      <router-view class="router-view-background" />
+    </v-main>
+  </v-app>
 </template>
 
-<script>
-export default {
-  name: "App",
-  components: {},
-  data: () => ({}),
-  computed: {
-  },
-  mounted: function () { },
-  methods: {},
-};
+<script lang="ts" setup>
+//
 </script>
+<style scoped>
+.router-view-background {
+  background-color: #176535; /* Changez cette couleur selon vos besoins */
+  /* min-height: 100vh;  */
+}
+</style>
